@@ -1,0 +1,31 @@
+name: pipeline
+
+on: 
+  push:
+  deployment:
+  release:
+    types: [created]
+  pull_request:
+    types: [opened, reopened]
+
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        type: choice
+        default: 'dev'
+        options:
+        - dev
+        - stg
+        - prd
+        - sbx
+        - dry
+
+jobs:
+
+  APP:
+    uses: filipeforattini/ff-iac-github-actions/.github/workflows/mob.yml@main
+    secrets: inherit
+    with:
+      mainBranch: main
