@@ -19,8 +19,6 @@ on:
         - dev
         - stg
         - prd
-        - sbx
-        - dry
 
 jobs:
 
