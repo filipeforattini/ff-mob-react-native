@@ -20,7 +20,7 @@ on:
 
 jobs:
 
-  APP:
+  MOB:
     uses: filipeforattini/ff-iac-github-actions/.github/workflows/mob.yml@main
     secrets: inherit
     with:
