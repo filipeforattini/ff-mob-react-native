@@ -1,3 +1,10 @@
+## [1.0.32](https://github.com/filipeforattini/ff-mob-react-native/compare/v1.0.31...v1.0.32) (2022-10-05)
+
+
+### Bug Fixes
+
+* pipeline new version test ([23bdd00](https://github.com/filipeforattini/ff-mob-react-native/commit/23bdd009a50751d73c62ff159986610101ea1d33))
+
 ## [1.0.31](https://github.com/filipeforattini/ff-mob-react-native/compare/v1.0.30...v1.0.31) (2022-10-05)
 
 
