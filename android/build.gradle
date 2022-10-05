@@ -50,19 +50,19 @@ allprojects {
     }
 }
 
-signingConfigs {
-    debug {
-        def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-        storeFile file("~/.android/ff-pipeline.jks")
-        keyAlias = "pipeline-key"
-        storePassword "$kPass"
-        keyPassword "$kPass"
-    }
-    release {
-        def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-        storeFile file("~/.android/ff-pipeline.jks")
-        keyAlias = "pipeline-key"
-        storePassword "$kPass"
-        keyPassword "$kPass"
-    }
-}
+// signingConfigs {
+//     debug {
+//         def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+//         storeFile file("~/.android/ff-pipeline.jks")
+//         keyAlias = "pipeline-key"
+//         storePassword "$kPass"
+//         keyPassword "$kPass"
+//     }
+//     release {
+//         def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+//         storeFile file("~/.android/ff-pipeline.jks")
+//         keyAlias = "pipeline-key"
+//         storePassword "$kPass"
+//         keyPassword "$kPass"
+//     }
+// }
