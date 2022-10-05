@@ -1,4 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+android {
+  signingConfigs {
+    config {
+      storeFile file(System.getenv("ANDROID_KEYSTORE_PATH"))
+      storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+      keyAlias "pipeline-key"
+      keyPassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+    }
+  }
+}
 
 buildscript {
     ext {
@@ -49,20 +59,3 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
-
-// signingConfigs {
-//     debug {
-//         def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-//         storeFile file("~/.android/ff-pipeline.jks")
-//         keyAlias = "pipeline-key"
-//         storePassword "$kPass"
-//         keyPassword "$kPass"
-//     }
-//     release {
-//         def kPass = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-//         storeFile file("~/.android/ff-pipeline.jks")
-//         keyAlias = "pipeline-key"
-//         storePassword "$kPass"
-//         keyPassword "$kPass"
-//     }
-// }
