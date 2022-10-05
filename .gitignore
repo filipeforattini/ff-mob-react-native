@@ -43,6 +43,7 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
+**/*.pem
 
 # fastlane
 #
@@ -63,4 +64,5 @@ buck-out/
 /ios/Pods/
 /vendor/bundle/
 
-**/*.pem
+# Android
+android/**/build/
